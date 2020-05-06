@@ -1,28 +1,20 @@
-.. image:: https://travis-ci.org/springload/wagtail-django-recaptcha.svg?branch=master
-   :target: https://travis-ci.org/springload/wagtail-django-recaptcha
-.. image:: https://img.shields.io/pypi/v/wagtail-django-recaptcha.svg
-   :target: https://pypi.python.org/pypi/wagtail-django-recaptcha
-.. image:: https://codeclimate.com/github/springload/wagtail-django-recaptcha/badges/gpa.svg
-   :target: https://codeclimate.com/github/springload/wagtail-django-recaptcha
-.. image:: https://coveralls.io/repos/github/springload/wagtail-django-recaptcha/badge.svg?branch=master
-   :target: https://coveralls.io/github/springload/wagtail-django-recaptcha?branch=master
+Wagtail Simple Captcha
+======================
 
-Wagtail ReCaptcha
-=================
+Wagtail forms with a Captcha form field/widget integration app. Wagtail Simple Captcha provides an easy way to integrate the `django-simple-captcha <https://github.com/mbi/django-simple-captcha>`_ field when using the Wagtail formbuilder.
 
-    Wagtail forms with a ReCaptcha form field/widget integration app. Wagtail ReCaptcha provides an easy way to integrate the `django-recaptcha <https://github.com/praekelt/django-recaptcha>`_ field when using the Wagtail formbuilder.
+This app is a modification of `wagtail-django-recaptcha <https://github.com/springload/wagtail-django-recaptcha>` by Springload.
 
 Check out `Awesome Wagtail <https://github.com/springload/awesome-wagtail>`_ for more awesome packages and resources from the Wagtail community.
 
 Installation
 ------------
 
-#. Install wagtailcaptcha via pip ``pip install wagtail-django-recaptcha`` or add ``wagtailcaptcha`` to your Python path.
+#. Install wagtailcaptcha via pip ``pip install wagtail-django-simple-captcha`` or add ``wagtailcaptcha`` to your Python path.
 
-#. Add ``wagtailcaptcha`` to your ``INSTALLED_APPS`` setting.
+#. Add ``wagtailcaptcha`` and ``captcha`` to your ``INSTALLED_APPS`` setting.
 
-#. Config django-recaptcha as explained in `here <https://github.com/praekelt/django-recaptcha>`_.
-
+#. Configure django-simple-captcha as explained in `here <https://django-simple-captcha.readthedocs.io/en/latest/usage.html>`_.
 
 Usage
 -----
@@ -77,7 +69,7 @@ Example
 
 The captcha field can't be added from the admin UI but will appear in your frontend as the last of the form fields.
 
-If you need to customise the behaviour of the form builder, make sure to inherit from ``wagtailcaptcha.forms.WagtailCaptchaFormBuilder`` instead of Wagtail's default form builder, then declare it as usual on the page model.
+If you need to customize the behavior of the form builder, make sure to inherit from ``wagtailcaptcha.forms.WagtailCaptchaFormBuilder`` instead of Wagtail's default form builder, then declare it as usual on the page model:
 
 .. code-block:: python
 
@@ -86,14 +78,14 @@ If you need to customise the behaviour of the form builder, make sure to inherit
 
 
     class CustomFormBuilder(WagtailCaptchaFormBuilder):
-        # Some custom behaviour...
+        # Some custom behavior...
 
 
     class FormPage(WagtailCaptchaForm):
         form_builder = CustomFormBuilder
         # The rest of the page definition as usual...
 
-For a more thorough example, `Made with Wagtail <http://madewithwagtail.org/>`_ (`github.com/springload/madewithwagtail <https://github.com/springload/madewithwagtail>`_) is an example of an open-source site using this module.
+For a more thorough example, `Made with Wagtail <http://madewithwagtail.org/>`_ (`github.com/springload/madewithwagtail <https://github.com/springload/madewithwagtail>`_) is an example of an open-source site using the module in which this app is based from.
 
 Development
 -----------
@@ -105,8 +97,8 @@ Installation
 
 .. code:: sh
 
-    git clone git@github.com:springload/wagtail-django-recaptcha.git
-    cd wagtail-django-recaptcha/
+    git clone git@github.com:acarasimon96/wagtail-django-simple-captcha.git
+    cd wagtail-django-simple-captcha/
     virtualenv .venv
     source ./.venv/bin/activate
     make init
@@ -116,16 +108,7 @@ Commands
 
 Use `make help` to get a list of commands.
 
-Releases
-~~~~~~~~
+Copyright
+---------
 
-*  Make a new branch for the release of the new version.
-*  Update the `CHANGELOG`_.
-*  Update the version number in ``wagtailcaptcha/__init__.py``, following semver.
-*  Make a PR and squash merge it.
-*  Back on ``master`` with the PR merged, use ``make publish`` (confirm, and enter your password).
-*  Finally, go to GitHub and create a release and a tag for the new version.
-*  Done!
-
-.. _Semantic Versioning: http://semver.org/spec/v2.0.0.html
-.. _changelog: https://github.com/springload/wagtail-django-recaptcha/blob/master/CHANGELOG.rst
+&copy; 2020 Timothy Bautista. Original code &copy; 2016 Springload. Licensed under MIT License
