@@ -1,7 +1,7 @@
-Wagtail Simple Captcha
+Wagtail hCaptcha
 ======================
 
-Wagtail forms with a Captcha form field/widget integration app. Wagtail Simple Captcha provides an easy way to integrate the `django-simple-captcha <https://github.com/mbi/django-simple-captcha>`_ field when using the Wagtail formbuilder.
+Wagtail forms with a hCaptcha form field/widget integration app. Wagtail hCaptcha provides an easy way to integrate the `django-hCaptcha <https://github.com/AndrejZbin>`_ field when using the Wagtail formbuilder.
 
 This app is a modification of `wagtail-django-recaptcha <https://github.com/springload/wagtail-django-recaptcha>` by Springload.
 
@@ -10,11 +10,11 @@ Check out `Awesome Wagtail <https://github.com/springload/awesome-wagtail>`_ for
 Installation
 ------------
 
-#. Install wagtailcaptcha via pip ``pip install wagtail-django-simple-captcha`` or add ``wagtailcaptcha`` to your Python path.
+#. Install wagtailcaptcha via pip ``pip install wagtail-django-hcaptcha`` or add ``wagtailcaptcha`` to your Python path.  (Note: not yet on PyPI; use ``pip install git+https://github.com/georgedorn/wagtail-django-hcaptcha`` until it is).
 
-#. Add ``wagtailcaptcha`` and ``captcha`` to your ``INSTALLED_APPS`` setting.
+#. Add ``wagtailcaptcha`` and ``hcaptcha`` to your ``INSTALLED_APPS`` setting.
 
-#. Configure django-simple-captcha as explained in `here <https://django-simple-captcha.readthedocs.io/en/latest/usage.html>`_.
+#. Configure django-hCaptcha as explained in `here <https://github.com/AndrejZbin/django-hcaptcha>`_.
 
 Usage
 -----
@@ -97,8 +97,8 @@ Installation
 
 .. code:: sh
 
-    git clone git@github.com:acarasimon96/wagtail-django-simple-captcha.git
-    cd wagtail-django-simple-captcha/
+    git clone git@github.com:georgedorn/wagtail-django-hcaptcha.git
+    cd wagtail-django-hcaptcha/
     virtualenv .venv
     source ./.venv/bin/activate
     make init
