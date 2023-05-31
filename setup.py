@@ -32,15 +32,15 @@ documentation_extras = [
 ]
 
 setup(
-    name='wagtail-django-simple-captcha',
+    name='wagtail-django-hcaptcha',
     version=__version__,
     packages=find_packages(),
     include_package_data=True,
     license='MIT',
-    description='A simple Captcha field for Wagtail form pages.',
+    description='A simple hCaptcha field for Wagtail form pages.',
     long_description=README,
-    url='http://github.com/acarasimon96/wagtail-django--simple-captcha',
-    author='Springload, Timothy Bautista (acarasimon96)',
+    url='http://github.com/georgedorn/wagtail-django-hcaptcha',
+    author='Springload, Timothy Bautista (acarasimon96), George Dorn (georgedorn)',
     author_email='hello@springload.co.nz',
     classifiers=[
         'Environment :: Web Environment',
@@ -58,7 +58,7 @@ setup(
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
     ],
-    install_requires=['django-simple-captcha'],
+    install_requires=['django-hcaptcha'],
     extras_require={
         'testing': testing_extras,
         'docs': documentation_extras,
