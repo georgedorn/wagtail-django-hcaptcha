@@ -1,7 +1,7 @@
 from __future__ import absolute_import, unicode_literals
 
 import wagtail
-from captcha.fields import CaptchaField
+from hcaptcha.fields import hCaptchaField
 
 if wagtail.VERSION >= (2, 0):
     from wagtail.contrib.forms.forms import FormBuilder
@@ -16,7 +16,7 @@ class WagtailCaptchaFormBuilder(FormBuilder):
     def formfields(self):
         # Add wagtailcaptcha to formfields property
         fields = super(WagtailCaptchaFormBuilder, self).formfields
-        fields[self.CAPTCHA_FIELD_NAME] = CaptchaField(label='')
+        fields[self.CAPTCHA_FIELD_NAME] = hCaptchaField(label='')
 
         return fields
 
